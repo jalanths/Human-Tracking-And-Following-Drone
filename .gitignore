@@ -1,12 +1,9 @@
-# This .gitignore file is for a Python project that uses various libraries,
-# runs on different platforms (Raspberry Pi, Mac), and might involve
-# machine learning models.
-
-# --- Python-specific files ---
-# Byte-compiled / optimized / DLL files
+# Byte-compiled / optimized / C extensions
 __pycache__/
-*.py[cod]
-*$py.class
+*.pyc
+*.pyo
+*.pyd
+*cpython-*.so
 
 # C extensions
 *.so
@@ -14,89 +11,65 @@ __pycache__/
 # Distribution / packaging
 .Python
 build/
+develop-eggs/
 dist/
+downloads/
 eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
 *.egg-info/
 .installed.cfg
-*.manifest
+*.egg
+MANIFEST
 
-# Venv
-venv/
-env/
+# PyInstaller
+#  Usually these files are created by pyinstaller, if you are using it.
+*.spec
 
-# MyPy
-.mypy_cache/
-.dmypy.json
-dmypy.json
-
-# Pytest
-.pytest_cache/
-
-# Pip cache files
+# Installer logs
 pip-log.txt
 pip-delete-this-directory.txt
 
-# --- Operating System Files ---
-# macOS
-.DS_Store
-.AppleDouble
-.LSOverride
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
 
-# Linux
-# Thumbnails
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
-
-# Windows
-# Folder config files
-desktop.ini
-
-# Caches
-*.suo
-*.user
-*.userosscache
-*.sln.docstates
-*.vshost
-*.vspscc
-*.vssscc
-*.tmp
-*.bak
-*.trig
-
-# --- IDEs and Editor Files ---
-# Visual Studio Code
-.vscode/
-
-# PyCharm
-.idea/
-
-# Vim
-*.swp
-*.swo
-
-# Emacs
-# temporary files
-*~
-# autosave files
-\#*#
-
-# --- Machine Learning and Data Files ---
-# YOLO weights files (if downloaded to the project directory)
-# These are often large and should not be committed to Git.
-# Assuming the file is named yolov8n.pt and is downloaded by the script.
-yolov8n.pt
-yolov8s.pt
-yolov8m.pt
-yolov8l.pt
-yolov8x.pt
-
-# Log files and outputs
-*.log
-output.jpg
-output.mp4
-
-# --- General ---
-# Environment variables file
+# Environments
 .env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE settings
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Large model files
+# You might want to uncomment the line below if you download other models
+# and don't want to commit them to the repository.
+# *.pt
